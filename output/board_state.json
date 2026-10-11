@@ -1,0 +1,286 @@
+{
+  "approvals": [
+    {
+      "id": "38b5756c",
+      "item_type": "payment",
+      "ticket_id": 101,
+      "run_id": "03996bf82a53",
+      "prepared_by": "accounting",
+      "status": "approved",
+      "proposal": {
+        "status": "awaiting_human_approval",
+        "reason": null,
+        "requires_human_approval": true,
+        "kind": "invoice",
+        "ref_id": 501,
+        "payee": "Bulldog Print Co",
+        "amount": 840.0,
+        "due_date": "2026-08-28",
+        "description": "Rush reprint CC-TEE-WHITE S",
+        "date_today": "2026-08-31",
+        "account": "checking",
+        "cash_balance": 3400.0,
+        "pending_total": 0.0,
+        "balance_after": 2560.0,
+        "sufficient_cash": true,
+        "prepared_for_ticket": 101,
+        "prepared_by": "accounting"
+      },
+      "created_at": "2026-10-11T18:40:17+00:00",
+      "approved_by": "Rakshita Podagatlapalli",
+      "approved_at": "2026-10-11T18:40:23+00:00",
+      "execution": {
+        "status": "paid",
+        "payment_id": 1,
+        "kind": "invoice",
+        "ref_id": 501,
+        "payee": "Bulldog Print Co",
+        "amount": 840.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Rakshita Podagatlapalli",
+        "balance_before": 3400.0,
+        "balance_after": 2560.0,
+        "invoice_id": 501,
+        "invoice_status": "paid"
+      }
+    },
+    {
+      "id": "2c44b8c8",
+      "item_type": "purchase_order",
+      "ticket_id": 101,
+      "run_id": "03996bf82a53",
+      "prepared_by": "accounting",
+      "status": "approved",
+      "proposal": {
+        "status": "awaiting_human_approval",
+        "reason": null,
+        "requires_human_approval": true,
+        "vendor_id": 1,
+        "vendor_name": "Bulldog Print Co",
+        "vendor_specialty": "apparel reprint",
+        "sku": "CC-TEE-WHITE",
+        "name": "Classic Bulldog Tee",
+        "size": "S",
+        "qty": 1,
+        "on_hand": 0,
+        "unit_cost": 8.0,
+        "total_cost": 8.0,
+        "lead_days": 5,
+        "date_today": "2026-08-31",
+        "expected_arrival_if_ordered_today": "2026-09-05",
+        "open_invoice_ids": [],
+        "account": "checking",
+        "cash_balance": 2560.0,
+        "pending_total": 0.0,
+        "balance_after": 2552.0,
+        "sufficient_cash": true,
+        "prepared_for_ticket": 101,
+        "prepared_by": "accounting"
+      },
+      "created_at": "2026-10-11T18:40:17+00:00",
+      "approved_by": "Rakshita Podagatlapalli",
+      "approved_at": "2026-10-11T18:41:15+00:00",
+      "execution": {
+        "status": "ordered",
+        "payment_id": 2,
+        "vendor_id": 1,
+        "vendor_name": "Bulldog Print Co",
+        "sku": "CC-TEE-WHITE",
+        "size": "S",
+        "qty": 1,
+        "amount": 8.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Rakshita Podagatlapalli",
+        "expected_arrival": "2026-09-05",
+        "balance_before": 2560.0,
+        "balance_after": 2552.0
+      }
+    },
+    {
+      "id": "d3e2e483",
+      "item_type": "payment",
+      "ticket_id": 102,
+      "run_id": "ac9936b74d76",
+      "prepared_by": "accounting",
+      "status": "approved",
+      "proposal": {
+        "status": "awaiting_human_approval",
+        "reason": null,
+        "requires_human_approval": true,
+        "kind": "rent",
+        "ref_id": 1,
+        "payee": "Elm City Properties",
+        "amount": 2400.0,
+        "due_date": "2026-09-02",
+        "description": "Rent for Chapel Street shop",
+        "date_today": "2026-08-31",
+        "account": "checking",
+        "cash_balance": 2552.0,
+        "pending_total": 0.0,
+        "balance_after": 152.0,
+        "sufficient_cash": true,
+        "prepared_for_ticket": 102,
+        "prepared_by": "accounting"
+      },
+      "created_at": "2026-10-11T18:41:46+00:00",
+      "approved_by": "Rakshita Podagatlapalli",
+      "approved_at": "2026-10-11T18:41:53+00:00",
+      "execution": {
+        "status": "paid",
+        "payment_id": 3,
+        "kind": "rent",
+        "ref_id": 1,
+        "payee": "Elm City Properties",
+        "amount": 2400.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Rakshita Podagatlapalli",
+        "balance_before": 2552.0,
+        "balance_after": 152.0,
+        "lease_id": 1,
+        "paid_due_date": "2026-09-02",
+        "next_due": "2026-10-02"
+      }
+    },
+    {
+      "id": "0ecc62ca",
+      "item_type": "purchase_order",
+      "ticket_id": 103,
+      "run_id": "6e0c2aabddae",
+      "prepared_by": "accounting",
+      "status": "refused",
+      "proposal": {
+        "status": "refused",
+        "reason": "Insufficient cash: balance would go negative.",
+        "requires_human_approval": true,
+        "vendor_id": 1,
+        "vendor_name": "Bulldog Print Co",
+        "vendor_specialty": "apparel reprint",
+        "sku": "CC-HOOD-NAVY",
+        "name": "Basic Hoodie Big Yale",
+        "size": "M",
+        "qty": 12,
+        "on_hand": 8,
+        "unit_cost": 22.0,
+        "total_cost": 264.0,
+        "lead_days": 5,
+        "date_today": "2026-08-31",
+        "expected_arrival_if_ordered_today": "2026-09-05",
+        "open_invoice_ids": [],
+        "account": "checking",
+        "cash_balance": 152.0,
+        "pending_total": 0.0,
+        "balance_after": -112.0,
+        "sufficient_cash": false,
+        "prepared_for_ticket": 103,
+        "prepared_by": "accounting"
+      },
+      "created_at": "2026-10-11T18:42:50+00:00",
+      "approved_by": null,
+      "approved_at": null,
+      "execution": null
+    }
+  ],
+  "results": {
+    "101": {
+      "ticket_id": 101,
+      "ticket_type": "customer_order",
+      "assigned_agents": [
+        "inventory",
+        "accounting",
+        "customer_service"
+      ],
+      "decision": "There is no CC-TEE-WHITE size S in stock. Accounting prepared a 1-unit restock purchase order with Bulldog Print Co for $8.00, awaiting human approval; it has not been placed. If approved and ordered today, the estimated arrival is 2026-09-05. Invoice 501 is already paid and needs no action. A customer update is drafted but not sent.",
+      "recommended_status": "awaiting_approval",
+      "payment_requests": [],
+      "purchase_orders": [
+        {
+          "vendor_id": 1,
+          "vendor_name": "Bulldog Print Co",
+          "sku": "CC-TEE-WHITE",
+          "size": "S",
+          "qty": 1,
+          "total_cost": 8.0,
+          "lead_days": 5,
+          "expected_arrival": "2026-09-05",
+          "status": "awaiting_human_approval",
+          "reason": "null"
+        }
+      ],
+      "message_drafts": [
+        {
+          "to": "Tauhid Zaman",
+          "subject": "Update on your Bulldog tee order",
+          "body": "Hi Tauhid,\n\nWe\u2019re currently out of stock of the white tee in size S. A restock order is awaiting approval and has not been placed yet. If it\u2019s approved and ordered today, the estimated arrival is September 5, 2026; this is an estimate, and we can\u2019t confirm fulfillment yet. We\u2019ll update you once the restock is arranged.\n\nCampus Customs"
+        }
+      ],
+      "open_issues": [
+        "Human approval is required before the purchase order can be placed; customer fulfillment is not confirmed."
+      ],
+      "run_id": "e5cd9e16f21f",
+      "finished_at": "2026-10-11T18:41:07+00:00"
+    },
+    "102": {
+      "ticket_id": 102,
+      "ticket_type": "rent_notice",
+      "assigned_agents": [
+        "facilities",
+        "accounting"
+      ],
+      "decision": "Facilities verified that the $2,400 rent for the Chapel Street shop is due 2026-09-02 and matches the notice. The rent payment has been prepared once for human approval; it has not been executed.",
+      "recommended_status": "awaiting_approval",
+      "payment_requests": [
+        {
+          "kind": "rent",
+          "ref_id": 1,
+          "payee": "Elm City Properties",
+          "amount": 2400.0,
+          "account": "checking",
+          "status": "awaiting_human_approval",
+          "reason": "Rent for Chapel Street shop; due 2026-09-02. Requires human approval."
+        }
+      ],
+      "purchase_orders": [],
+      "message_drafts": [],
+      "open_issues": [
+        "Human approval is required before payment; no payment has been executed."
+      ],
+      "run_id": "ac9936b74d76",
+      "finished_at": "2026-10-11T18:41:46+00:00"
+    },
+    "103": {
+      "ticket_id": 103,
+      "ticket_type": "price_override",
+      "assigned_agents": [
+        "inventory",
+        "accounting",
+        "customer_service"
+      ],
+      "decision": "Apply the authorized 10% bulk discount at $52.20 per hoodie (list $58.00) and offer Yale AI Club the 8 size-M CC-HOOD-NAVY hoodies in stock. Do not restock the remaining 12. The discounted price passes the margin check; no payment or purchase order is needed. Customer reply is drafted, not sent.",
+      "recommended_status": "resolved",
+      "payment_requests": [],
+      "purchase_orders": [],
+      "message_drafts": [
+        {
+          "to": "Yale AI Club",
+          "subject": "Bulk hoodie request",
+          "body": "Hi Yale AI Club,\n\nThanks for reaching out. We currently have 8 CC-HOOD-NAVY hoodies in size M available, so we can offer 8 of the 20 requested. The approved bulk price is $52.20 per hoodie (10% off the $58.00 list price).\n\nPlease let us know if you\u2019d like to proceed with the 8 available hoodies.\n\nCampus Customs"
+        }
+      ],
+      "open_issues": [],
+      "run_id": "dffcdf0d00c7",
+      "finished_at": "2026-10-11T18:43:23+00:00"
+    }
+  },
+  "decisions": {
+    "103": [
+      {
+        "decided_by": "Rakshita Podagatlapalli",
+        "decision": "Grant a 10% bulk discount: $52.20 per hoodie (list $58.00). Sell Yale AI Club the 8 size-M hoodies currently in stock at that price. Do not restock the remaining 12 now: checking cannot cover the $264 restock. Tell the club only 8 are available.",
+        "decided_at": "2026-10-11T18:43:00+00:00"
+      }
+    ]
+  }
+}

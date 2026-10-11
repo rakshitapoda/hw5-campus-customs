@@ -1,0 +1,372 @@
+{
+  "description": "Full run of tickets 101-103 after resetting data/campus_customs_new.db from the original database.",
+  "database": "data/campus_customs_new.db",
+  "model": "gpt-6-luna",
+  "starting_checking_balance": 3400.0,
+  "ending_checking_balance": 152.0,
+  "ending_balance_in_cash_accounts": 152.0,
+  "total_paid_out": 3248.0,
+  "tickets": [
+    {
+      "id": 101,
+      "type": "customer_order",
+      "requester": "Tauhid Zaman",
+      "subject": "Bulldog tee",
+      "final_status": "resolved",
+      "outcome": "Invoice #501 ($840) paid so Bulldog Print Co could ship. A 1-unit tee restock ($8) was ordered, arriving 2026-09-05. Customer update drafted for Tauhid Zaman.",
+      "agent_runs": [
+        {
+          "run_id": "03996bf82a53",
+          "recommended_status": "awaiting_approval",
+          "agents": [
+            "boss",
+            "inventory",
+            "accounting",
+            "customer_service"
+          ],
+          "delegations": [
+            {
+              "from": "boss",
+              "to": "inventory"
+            },
+            {
+              "from": "boss",
+              "to": "accounting"
+            },
+            {
+              "from": "boss",
+              "to": "customer_service"
+            }
+          ],
+          "tools_used": {
+            "Boss": [
+              "get_ticket"
+            ],
+            "Inventory": [
+              "check_inventory",
+              "check_vendor_status"
+            ],
+            "Customer Service": [
+              "get_ticket"
+            ],
+            "Accounting": [
+              "check_vendor_status",
+              "get_cash_balance",
+              "get_invoice",
+              "get_shop_date",
+              "prepare_payment",
+              "prepare_purchase_order"
+            ]
+          },
+          "usage": {
+            "requests": 12,
+            "tool_calls": 13,
+            "tokens": 27839
+          }
+        },
+        {
+          "run_id": "e5cd9e16f21f",
+          "recommended_status": "awaiting_approval",
+          "agents": [
+            "boss",
+            "inventory",
+            "accounting",
+            "customer_service"
+          ],
+          "delegations": [
+            {
+              "from": "boss",
+              "to": "inventory"
+            },
+            {
+              "from": "boss",
+              "to": "accounting"
+            },
+            {
+              "from": "boss",
+              "to": "customer_service"
+            }
+          ],
+          "tools_used": {
+            "Boss": [
+              "get_ticket"
+            ],
+            "Inventory": [
+              "check_inventory",
+              "check_vendor_status",
+              "get_shop_date",
+              "get_ticket"
+            ],
+            "Accounting": [
+              "check_vendor_status",
+              "get_cash_balance",
+              "get_invoice",
+              "get_ticket",
+              "prepare_purchase_order"
+            ],
+            "Customer Service": [
+              "get_ticket"
+            ]
+          },
+          "usage": {
+            "requests": 13,
+            "tool_calls": 14,
+            "tokens": 31252
+          }
+        }
+      ],
+      "agent_contributions": {
+        "Boss": "Read the ticket, delegated to Inventory, Accounting, and Customer Service in both runs, and made the final call each time.",
+        "Inventory": "Found CC-TEE-WHITE size S at 0. Identified Bulldog Print Co (apparel, 5 lead days) as the restock vendor, first blocked by open invoice #501, then able to ship once it was paid.",
+        "Accounting": "Prepared the $840.00 invoice #501 payment (approved) and the 1-unit $8.00 tee PO, which was blocked in run 1, prepared in run 2, and approved. Arrival 2026-09-05.",
+        "Customer Service": "Drafted the update to Tauhid Zaman (not sent). No firm date while blocked, then a conditional 2026-09-05 estimate."
+      },
+      "human_approvals": [
+        {
+          "approval_id": "38b5756c",
+          "type": "payment",
+          "item": "Invoice #501 \u2192 Bulldog Print Co",
+          "amount": 840.0,
+          "approved_by": "Rakshita Podagatlapalli",
+          "approved_at": "2026-10-11T18:40:23+00:00",
+          "payment_id": 1,
+          "balance_before": 3400.0,
+          "balance_after": 2560.0
+        },
+        {
+          "approval_id": "2c44b8c8",
+          "type": "purchase_order",
+          "item": "Restock 1 \u00d7 CC-TEE-WHITE (S) \u2192 Bulldog Print Co",
+          "amount": 8.0,
+          "approved_by": "Rakshita Podagatlapalli",
+          "approved_at": "2026-10-11T18:41:15+00:00",
+          "payment_id": 2,
+          "balance_before": 2560.0,
+          "balance_after": 2552.0
+        }
+      ],
+      "not_approved": [],
+      "human_decisions": [],
+      "cash_change": -848.0,
+      "message_drafts": [
+        {
+          "to": "Tauhid Zaman",
+          "subject": "Update on your Bulldog tee order",
+          "body": "Hi Tauhid,\n\nWe\u2019re currently out of stock of the white tee in size S. A restock order is awaiting approval and has not been placed yet. If it\u2019s approved and ordered today, the estimated arrival is September 5, 2026; this is an estimate, and we can\u2019t confirm fulfillment yet. We\u2019ll update you once the restock is arranged.\n\nCampus Customs"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "type": "rent_notice",
+      "requester": "Elm City Properties",
+      "subject": "Rent due",
+      "final_status": "resolved",
+      "outcome": "Rent notice verified against lease #1. $2,400 rent paid to Elm City Properties. Lease next_due moved from 2026-09-02 to 2026-10-02.",
+      "agent_runs": [
+        {
+          "run_id": "ac9936b74d76",
+          "recommended_status": "awaiting_approval",
+          "agents": [
+            "boss",
+            "facilities",
+            "accounting"
+          ],
+          "delegations": [
+            {
+              "from": "boss",
+              "to": "facilities"
+            },
+            {
+              "from": "facilities",
+              "to": "accounting"
+            }
+          ],
+          "tools_used": {
+            "Boss": [
+              "get_shop_date",
+              "get_ticket"
+            ],
+            "Facilities": [
+              "get_lease",
+              "get_ticket"
+            ],
+            "Accounting": [
+              "get_cash_balance",
+              "get_shop_date",
+              "get_ticket",
+              "prepare_payment"
+            ]
+          },
+          "usage": {
+            "requests": 10,
+            "tool_calls": 10,
+            "tokens": 20500
+          }
+        }
+      ],
+      "agent_contributions": {
+        "Boss": "Read the ticket and shop date, delegated to Facilities, and made the final call.",
+        "Facilities": "Checked the notice against lease #1 (Elm City Properties, $2,400.00, due 2026-09-02, 2 days out) and delegated the payment to Accounting.",
+        "Accounting": "Checked cash ($2,552.00) and prepared the $2,400.00 rent payment for approval (approved)."
+      },
+      "human_approvals": [
+        {
+          "approval_id": "d3e2e483",
+          "type": "payment",
+          "item": "Rent \u00b7 lease #1 \u2192 Elm City Properties",
+          "amount": 2400.0,
+          "approved_by": "Rakshita Podagatlapalli",
+          "approved_at": "2026-10-11T18:41:53+00:00",
+          "payment_id": 3,
+          "balance_before": 2552.0,
+          "balance_after": 152.0
+        }
+      ],
+      "not_approved": [],
+      "human_decisions": [],
+      "cash_change": -2400.0,
+      "message_drafts": []
+    },
+    {
+      "id": 103,
+      "type": "price_override",
+      "requester": "Yale AI Club",
+      "subject": "Bulk hoodie discount",
+      "final_status": "resolved",
+      "outcome": "Human decision: 10% bulk discount ($52.20 vs $58.00 list) on the 8 size-M hoodies in stock. The 12-unit restock ($264) was refused for insufficient cash and not ordered. Reply drafted for Yale AI Club.",
+      "agent_runs": [
+        {
+          "run_id": "6e0c2aabddae",
+          "recommended_status": "needs_human",
+          "agents": [
+            "boss",
+            "accounting",
+            "inventory",
+            "customer_service"
+          ],
+          "delegations": [
+            {
+              "from": "boss",
+              "to": "accounting"
+            },
+            {
+              "from": "boss",
+              "to": "inventory"
+            },
+            {
+              "from": "boss",
+              "to": "accounting"
+            },
+            {
+              "from": "boss",
+              "to": "customer_service"
+            }
+          ],
+          "tools_used": {
+            "Boss": [
+              "get_ticket"
+            ],
+            "Accounting": [
+              "check_margin",
+              "check_vendor_status",
+              "get_cash_balance",
+              "get_ticket",
+              "prepare_purchase_order"
+            ],
+            "Inventory": [
+              "check_inventory",
+              "check_vendor_status",
+              "get_shop_date",
+              "get_ticket"
+            ],
+            "Customer Service": [
+              "get_ticket"
+            ]
+          },
+          "usage": {
+            "requests": 20,
+            "tool_calls": 19,
+            "tokens": 50272
+          }
+        },
+        {
+          "run_id": "dffcdf0d00c7",
+          "recommended_status": "resolved",
+          "agents": [
+            "boss",
+            "inventory",
+            "accounting",
+            "customer_service"
+          ],
+          "delegations": [
+            {
+              "from": "boss",
+              "to": "inventory"
+            },
+            {
+              "from": "boss",
+              "to": "accounting"
+            },
+            {
+              "from": "boss",
+              "to": "customer_service"
+            }
+          ],
+          "tools_used": {
+            "Boss": [
+              "get_ticket"
+            ],
+            "Inventory": [
+              "check_inventory"
+            ],
+            "Accounting": [
+              "check_margin",
+              "get_cash_balance",
+              "get_ticket"
+            ],
+            "Customer Service": [
+              "get_ticket"
+            ]
+          },
+          "usage": {
+            "requests": 10,
+            "tool_calls": 9,
+            "tokens": 21100
+          }
+        }
+      ],
+      "agent_contributions": {
+        "Boss": "Run 1: flagged needs_human for the discount. Run 2: applied the recorded human decision and resolved the ticket.",
+        "Inventory": "Confirmed 8 of 20 CC-HOOD-NAVY size M on hand (short 12) and that the apparel vendor can ship.",
+        "Accounting": "Margins at 10/15/20% off ($52.20 / $49.30 / $46.40, none below the $22 cost). The 12-unit $264.00 PO was refused for insufficient cash ($152.00). Confirmed $52.20 passes the margin check and that nothing needs paying.",
+        "Customer Service": "Drafted the reply to Yale AI Club (not sent). Run 1: no promises. Run 2: offers the 8 in stock at the approved $52.20."
+      },
+      "human_approvals": [],
+      "not_approved": [
+        {
+          "type": "purchase_order",
+          "item": "Restock 12 \u00d7 CC-HOOD-NAVY (M) \u2192 Bulldog Print Co",
+          "amount": 264.0,
+          "status": "refused",
+          "reason": "Insufficient cash: balance would go negative."
+        }
+      ],
+      "human_decisions": [
+        {
+          "decided_by": "Rakshita Podagatlapalli",
+          "decision": "Grant a 10% bulk discount: $52.20 per hoodie (list $58.00). Sell Yale AI Club the 8 size-M hoodies currently in stock at that price. Do not restock the remaining 12 now: checking cannot cover the $264 restock. Tell the club only 8 are available.",
+          "decided_at": "2026-10-11T18:43:00+00:00"
+        }
+      ],
+      "cash_change": 0,
+      "message_drafts": [
+        {
+          "to": "Yale AI Club",
+          "subject": "Bulk hoodie request",
+          "body": "Hi Yale AI Club,\n\nThanks for reaching out. We currently have 8 CC-HOOD-NAVY hoodies in size M available, so we can offer 8 of the 20 requested. The approved bulk price is $52.20 per hoodie (10% off the $58.00 list price).\n\nPlease let us know if you\u2019d like to proceed with the 8 available hoodies.\n\nCampus Customs"
+        }
+      ]
+    }
+  ]
+}

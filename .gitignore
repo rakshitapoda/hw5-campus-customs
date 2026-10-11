@@ -1,0 +1,30 @@
+# --- Secrets: never commit real keys ---
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+*.pem
+*.key
+secrets*.json
+credentials*.json
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# --- Node / frontend build ---
+node_modules/
+frontend/dist/
+
+# --- Temp / OS ---
+*.tmp
+*.json.tmp
+.DS_Store
+
+# Both databases under data/ ARE committed on purpose (original + working copy).
+!data/campus_customs.db
+!data/campus_customs_new.db
